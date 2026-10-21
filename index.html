@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sree Ayyappan Rooms — comfortable AC, Non-AC, and dormitory stays just 45 meters from the Temple West Entrance. Peaceful lodging for pilgrims." />
+  <title>Sree Ayyappan Rooms | Comfortable Stay Near the Temple</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tealTheme: {
+              deep: '#388087',
+              medium: '#6FB3B8',
+              ice: '#BADFE7',
+              mint: '#C2EDCE',
+              bg: '#F6F6F2',
+            },
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .hero-pattern {
+      background-image: radial-gradient(rgba(56, 128, 135, 0.1) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .rooms-marquee {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    }
+    .rooms-marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 1rem;
+      animation: rooms-scroll 40s linear infinite;
+    }
+    .rooms-marquee:hover .rooms-marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes rooms-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rooms-marquee-track {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-tealTheme-bg text-slate-800 font-sans antialiased text-base leading-relaxed">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-tealTheme-ice/40 bg-white/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#home" class="font-serif text-lg font-bold tracking-wide text-tealTheme-deep transition hover:text-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium sm:text-xl">
+        SREE AYYAPPAN ROOMS
+      </a>
+
+      <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary">
+        <a href="#home" class="text-sm font-medium text-slate-700 transition hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Home</a>
+        <a href="#accommodations" class="text-sm font-medium text-slate-700 transition hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Accommodations</a>
+        <a href="#highlights" class="text-sm font-medium text-slate-700 transition hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Key Highlights</a>
+        <a href="#location" class="text-sm font-medium text-slate-700 transition hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Location &amp; Distance</a>
+        <a href="#contact" class="text-sm font-medium text-slate-700 transition hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="tel:7511148118" class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-deep px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2">
+          Book Now
+        </a>
+        <button type="button" id="menu-toggle" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-tealTheme-ice bg-white text-tealTheme-deep transition hover:border-tealTheme-medium hover:text-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-tealTheme-ice/40 bg-white lg:hidden" hidden>
+      <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 sm:px-6" aria-label="Mobile">
+        <a href="#home" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-tealTheme-mint/40 hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Home</a>
+        <a href="#accommodations" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-tealTheme-mint/40 hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Accommodations</a>
+        <a href="#highlights" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-tealTheme-mint/40 hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Key Highlights</a>
+        <a href="#location" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-tealTheme-mint/40 hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Location &amp; Distance</a>
+        <a href="#contact" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-slate-700 transition hover:bg-tealTheme-mint/40 hover:text-tealTheme-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Contact</a>
+        <a href="tel:7511148118" class="mobile-link mt-2 inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-deep px-4 py-3 text-sm font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">Call Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero-pattern relative overflow-hidden bg-tealTheme-mint/20">
+      <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-20">
+        <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <!-- Left: Distance map -->
+          <div class="order-2 lg:order-1">
+            <figure class="overflow-hidden rounded-xl border border-tealTheme-ice/60 bg-white shadow-md">
+              <img
+                src="sree%20ayyapan%20rooms%20distance%20to%20temple1.png"
+                alt="Map showing Sree Ayyappan Rooms only 45 meters from the Temple West Entrance along West Nada"
+                class="h-auto w-full object-cover object-center"
+              />
+            </figure>
+          </div>
+
+          <!-- Right: Hero copy -->
+          <div class="order-1 text-center lg:order-2 lg:text-left">
+            <p class="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-tealTheme-medium">Sacred · Peaceful · Nearby</p>
+            <h1 class="font-serif text-4xl font-bold leading-tight text-tealTheme-deep sm:text-5xl">
+              Comfortable &amp; Peaceful Stay Near the Temple
+            </h1>
+            <p class="mt-5 text-lg text-slate-700 sm:text-xl">
+              Located just 45 meters from the Temple West Entrance.
+            </p>
+
+            <div class="mt-6 flex justify-center lg:justify-start">
+              <span class="rounded-full bg-tealTheme-mint px-4 py-1.5 text-sm font-medium text-tealTheme-deep">
+                45 meters from Temple West Entrance
+              </span>
+            </div>
+
+            <div class="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
+              <a href="#accommodations" class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-deep px-6 py-3 text-sm font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2">
+                View Rooms
+              </a>
+              <a href="#contact" class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-ice px-6 py-3 text-sm font-medium text-tealTheme-deep transition hover:bg-tealTheme-mint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2">
+                Contact Us
+              </a>
+            </div>
+
+            <ul class="mt-10 flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:justify-start" aria-label="Quick information">
+              <li class="rounded-full border border-tealTheme-ice bg-white px-4 py-2 text-sm font-medium text-tealTheme-deep shadow-sm">A/C Available</li>
+              <li class="rounded-full border border-tealTheme-ice bg-white px-4 py-2 text-sm font-medium text-tealTheme-deep shadow-sm">Non A/C Rooms</li>
+              <li class="rounded-full border border-tealTheme-ice bg-white px-4 py-2 text-sm font-medium text-tealTheme-deep shadow-sm">Dormitory Beds</li>
+              <li class="rounded-full bg-tealTheme-mint px-4 py-2 text-sm font-medium text-tealTheme-deep">45m from West Entrance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Auto-scrolling room images -->
+    <section class="border-y border-tealTheme-ice/40 bg-white py-8 md:py-10" aria-label="Room gallery">
+      <div class="mx-auto mb-6 max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-tealTheme-medium">Our Rooms</p>
+        <h2 class="mt-2 font-serif text-2xl font-bold text-tealTheme-deep sm:text-3xl">A Glimpse Inside</h2>
+      </div>
+      <div class="rooms-marquee">
+        <div class="rooms-marquee-track">
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_1.jpeg" alt="Sree Ayyappan Rooms interior view 1" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_2.jpeg" alt="Sree Ayyappan Rooms interior view 2" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_3.jpeg" alt="Sree Ayyappan Rooms interior view 3" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_4.jpeg" alt="Sree Ayyappan Rooms interior view 4" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_5.jpeg" alt="Sree Ayyappan Rooms interior view 5" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_6.jpeg" alt="Sree Ayyappan Rooms interior view 6" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80">
+            <img src="images/sree_ayyapa_7.jpeg" alt="Sree Ayyappan Rooms interior view 7" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          
+          <!-- Duplicate set for seamless loop -->
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_1.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_2.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_3.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_4.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_5.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_6.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+          <figure class="w-64 shrink-0 overflow-hidden rounded-xl border border-tealTheme-ice/60 shadow-sm sm:w-72 md:w-80" aria-hidden="true">
+            <img src="images/sree_ayyapa_7.jpeg" alt="" class="h-44 w-full object-cover sm:h-48 md:h-52" loading="lazy" />
+          </figure>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Accommodations -->
+    <section id="accommodations" class="py-16 md:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-serif text-3xl font-bold text-tealTheme-deep sm:text-4xl">Accommodations</h2>
+          <p class="mt-3 text-slate-700">
+            Choose the stay that suits your pilgrimage — from premium AC comfort to spacious group dormitories.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
+          <!-- AC Rooms -->
+          <article class="group rounded-xl border border-tealTheme-ice/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-tealTheme-medium hover:shadow-md">
+            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-tealTheme-ice/50 text-tealTheme-deep transition group-hover:bg-tealTheme-mint">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M3 12h2m14 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41M8 12a4 4 0 108 0 4 4 0 00-8 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-tealTheme-deep">AC Rooms</h3>
+            <p class="mt-3 text-slate-700">
+              Premium air-conditioned rooms designed for max comfort and relaxation after pilgrimage.
+            </p>
+            <div class="mt-6 h-1 w-12 rounded-full bg-tealTheme-ice transition group-hover:w-20 group-hover:bg-tealTheme-medium" aria-hidden="true"></div>
+          </article>
+
+          <!-- Non AC Rooms -->
+          <article class="group rounded-xl border border-tealTheme-ice/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-tealTheme-medium hover:shadow-md">
+            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-tealTheme-ice/50 text-tealTheme-deep transition group-hover:bg-tealTheme-mint">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.5-2.5 5-3.5 8-3.5M12 12c-2.5-2.5-5-3.5-8-3.5M12 12c2.5 2.5 5 3.5 8 3.5M12 12c-2.5 2.5-5 3.5-8 3.5M12 4v16" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-tealTheme-deep">Non AC Rooms</h3>
+            <p class="mt-3 text-slate-700">
+              Well-ventilated, budget-friendly traditional rooms equipped with modern amenities.
+            </p>
+            <div class="mt-6 h-1 w-12 rounded-full bg-tealTheme-ice transition group-hover:w-20 group-hover:bg-tealTheme-medium" aria-hidden="true"></div>
+          </article>
+
+          <!-- Dormitory -->
+          <article class="group rounded-xl border border-tealTheme-ice/60 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-tealTheme-medium hover:shadow-md">
+            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-tealTheme-ice/50 text-tealTheme-deep transition group-hover:bg-tealTheme-mint">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18M6 7v10M12 7v10M18 7v10" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-tealTheme-deep">Dormitory Facilities</h3>
+            <p class="mt-3 text-slate-700">
+              Spacious and clean dormitory stay ideal for large group pilgrims and families.
+            </p>
+            <div class="mt-6 h-1 w-12 rounded-full bg-tealTheme-ice transition group-hover:w-20 group-hover:bg-tealTheme-medium" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights + Location -->
+    <section class="bg-white py-16 md:py-20">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
+
+        <div id="highlights">
+          <h2 class="font-serif text-3xl font-bold text-tealTheme-deep sm:text-4xl">Key Highlights</h2>
+          <p class="mt-3 text-slate-700">
+            Thoughtful amenities so you can rest well and focus on your spiritual journey.
+          </p>
+
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-start gap-3 rounded-xl border border-tealTheme-ice/60 bg-tealTheme-bg p-4 shadow-sm">
+              <span class="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tealTheme-mint text-tealTheme-deep" aria-hidden="true">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="font-medium text-slate-800">24/7 Water Facility</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-xl border border-tealTheme-ice/60 bg-tealTheme-bg p-4 shadow-sm">
+              <span class="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tealTheme-mint text-tealTheme-deep" aria-hidden="true">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="font-medium text-slate-800">Neat &amp; Hygienic Washrooms</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-xl border border-tealTheme-ice/60 bg-tealTheme-bg p-4 shadow-sm">
+              <span class="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tealTheme-mint text-tealTheme-deep" aria-hidden="true">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="font-medium text-slate-800">Walking Distance to Temple</span>
+            </li>
+            <li class="flex items-start gap-3 rounded-xl border border-tealTheme-ice/60 bg-tealTheme-bg p-4 shadow-sm">
+              <span class="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tealTheme-mint text-tealTheme-deep" aria-hidden="true">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="font-medium text-slate-800">Quiet Environment</span>
+            </li>
+          </ul>
+        </div>
+
+        <div id="location" class="flex flex-col justify-center">
+          <div class="rounded-xl border border-tealTheme-ice/60 bg-tealTheme-mint/30 p-8 shadow-sm">
+            <div class="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-tealTheme-deep text-white">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+            </div>
+            <h2 class="font-serif text-2xl font-bold text-tealTheme-deep sm:text-3xl">Location &amp; Distance</h2>
+            <p class="mt-4 text-xl font-semibold text-tealTheme-deep">
+              Only 45 meters from the Temple West Entrance
+            </p>
+            <p class="mt-3 text-slate-700">
+              Steps away from the temple — rest in a calm, welcoming space after darshan without long walks or travel.
+            </p>
+
+            <div class="mt-6">
+              <span class="inline-block rounded-full bg-tealTheme-mint px-4 py-1.5 text-sm font-medium text-tealTheme-deep">
+                45 meters from Temple West Entrance
+              </span>
+            </div>
+
+            <div class="mt-8" aria-hidden="true">
+              <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-slate-600">
+                <span>Rooms</span>
+                <span>West Entrance</span>
+              </div>
+              <div class="relative mt-2 h-2 rounded-full bg-tealTheme-ice/60">
+                <div class="absolute inset-y-0 left-0 w-[18%] rounded-full bg-gradient-to-r from-tealTheme-deep to-tealTheme-medium"></div>
+                <div class="absolute left-[18%] top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-tealTheme-deep shadow"></div>
+              </div>
+              <p class="mt-3 text-center text-sm font-semibold text-tealTheme-deep">45 meters</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 md:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="font-serif text-3xl font-bold text-tealTheme-deep sm:text-4xl">Contact &amp; Booking</h2>
+          <p class="mt-3 text-slate-700">
+            Reach out to reserve your room — we are happy to help with your stay.
+          </p>
+        </div>
+
+        <div class="mx-auto mt-12 max-w-3xl rounded-xl border border-tealTheme-ice/60 bg-white p-6 shadow-sm sm:p-8 md:p-10">
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wider text-tealTheme-medium">Phone</p>
+              <a href="tel:7511148118" class="mt-2 inline-block text-2xl font-bold text-tealTheme-deep transition hover:text-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium sm:text-3xl">
+                7511148118
+              </a>
+            </div>
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wider text-tealTheme-medium">Email</p>
+              <a href="mailto:kiranraveendran74@gmail.com" class="mt-2 inline-block break-all text-lg font-semibold text-tealTheme-deep transition hover:text-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium">
+                kiranraveendran74@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-8 border-t border-tealTheme-ice pt-8">
+            <p class="text-sm font-semibold uppercase tracking-wider text-tealTheme-medium">Address / Proximity</p>
+            <p class="mt-2 text-lg font-medium text-slate-800">
+              Just 45 meters from the Temple West Entrance.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="tel:7511148118" class="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-lg bg-tealTheme-deep px-6 py-3 text-sm font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2">
+              Call Now
+            </a>
+            <a href="mailto:kiranraveendran74@gmail.com" class="inline-flex min-h-[44px] flex-1 items-center justify-center rounded-lg bg-tealTheme-ice px-6 py-3 text-sm font-medium text-tealTheme-deep transition hover:bg-tealTheme-mint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2">
+              Send Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-tealTheme-deep text-white">
+    <div class="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6 lg:px-8">
+      <p class="font-serif text-lg font-semibold text-white">Sree Ayyappan Rooms</p>
+      <p class="mt-3 text-sm text-tealTheme-ice">
+        <a href="tel:7511148118" class="text-tealTheme-mint transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-mint">7511148118</a>
+        <span class="mx-2 text-tealTheme-medium" aria-hidden="true">·</span>
+        <a href="mailto:kiranraveendran74@gmail.com" class="text-tealTheme-mint transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-mint">kiranraveendran74@gmail.com</a>
+      </p>
+      <p class="mt-2 text-sm text-tealTheme-ice">Just 45 meters from the Temple West Entrance.</p>
+      <p class="mt-6 text-sm text-tealTheme-ice/80">© Sree Ayyappan Rooms. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      var links = document.querySelectorAll('.mobile-link');
+
+      function setOpen(open) {
+        menu.classList.toggle('hidden', !open);
+        if (open) {
+          menu.removeAttribute('hidden');
+        } else {
+          menu.setAttribute('hidden', '');
+        }
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+
+      toggle.addEventListener('click', function () {
+        setOpen(menu.classList.contains('hidden'));
+      });
+
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          setOpen(false);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
