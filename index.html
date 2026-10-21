@@ -80,7 +80,7 @@
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="tel:7511148118" class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-deep px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2">
+        <a href="tel:7511148118" class="inline-flex min-h-[40px] shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-tealTheme-deep px-2.5 py-1.5 text-xs font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2 sm:min-h-[44px] sm:px-4 sm:py-2 sm:text-sm">
           Book Now
         </a>
         <button type="button" id="menu-toggle" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-tealTheme-ice bg-white text-tealTheme-deep transition hover:border-tealTheme-medium hover:text-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium lg:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
@@ -351,6 +351,47 @@
               <p class="mt-3 text-center text-sm font-semibold text-tealTheme-deep">45 meters</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Map Location -->
+    <section id="map" class="bg-tealTheme-bg py-16 md:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-tealTheme-medium">Find Us</p>
+          <h2 class="mt-2 font-serif text-3xl font-bold text-tealTheme-deep sm:text-4xl">Our Location</h2>
+          <p class="mt-3 text-slate-700">
+            Sree Ayyappan Rooms — just steps from the Temple West Entrance on West Nada.
+          </p>
+        </div>
+
+        <div class="mt-10 overflow-hidden rounded-xl border border-tealTheme-ice/60 bg-white shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d914.6067966583072!2d76.94207664834059!3d8.482976978940794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbcf8cb5f6cb%3A0x6dba32601d84bbbc!2sSree%20Ayyappan%20Rooms!5e1!3m2!1sen!2sin!4v1792584761356!5m2!1sen!2sin"
+            title="Sree Ayyappan Rooms on Google Maps"
+            class="h-[300px] w-full border-0 sm:h-[400px] md:h-[450px]"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+
+        <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a
+            href="https://www.google.com/maps/place/Sree+Ayyappan+Rooms/@8.482976978940794,76.94207664834059,18z"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-deep px-6 py-3 text-sm font-medium text-white shadow transition hover:bg-tealTheme-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2"
+          >
+            Open in Google Maps
+          </a>
+          <a
+            href="#location"
+            class="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-tealTheme-ice px-6 py-3 text-sm font-medium text-tealTheme-deep transition hover:bg-tealTheme-mint focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tealTheme-medium focus-visible:ring-offset-2"
+          >
+            View Distance Details
+          </a>
         </div>
       </div>
     </section>
