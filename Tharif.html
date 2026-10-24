@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Tariff Sheet | Travel Agency Enquiries</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            padding: 30px 15px;
+        }
+
+        .tariff-sheet {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 45px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #334155;
+            padding-bottom: 22px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: #64748b;
+        }
+
+        .section-title {
+            font-size: 17px;
+            color: #334155;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            background: #334155;
+            color: #ffffff;
+            text-align: left;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        th:last-child,
+        td:last-child {
+            text-align: right;
+        }
+
+        td {
+            padding: 18px 15px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 15px;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: bold;
+            color: #334155;
+            white-space: nowrap;
+        }
+
+        .fresh-up {
+            background: #f1f5f9;
+            padding: 22px;
+            border-left: 4px solid #6366f1;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+
+        .fresh-up-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .fresh-up .price {
+            font-size: 21px;
+        }
+
+        .duration {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .terms {
+            border-top: 1px solid #cbd5e1;
+            padding-top: 22px;
+        }
+
+        .terms h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #334155;
+        }
+
+        .terms ul {
+            padding-left: 20px;
+        }
+
+        .terms li {
+            color: #475569;
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .print-button {
+            display: block;
+            margin: 25px auto 0;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            background: #334155;
+            color: #ffffff;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background: #1e293b;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .tariff-sheet {
+                padding: 22px 16px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            th, td {
+                padding: 13px 9px;
+                font-size: 13px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: #ffffff;
+            }
+
+            .tariff-sheet {
+                max-width: none;
+                border: none;
+                box-shadow: none;
+                padding: 15px;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            th {
+                background: #334155 !important;
+                color: #ffffff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .fresh-up {
+                background: #f1f5f9 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            tbody tr:nth-child(even) {
+                background: #f8fafc !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="tariff-sheet">
+
+        <header class="header">
+            <h1>ROOM TARIFF SHEET</h1>
+            <p>TRAVEL AGENCY BOOKING ENQUIRIES</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Accommodation Rates</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Room Type</th>
+                        <th>Tariff (INR)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>AC Hall (Capacity: 8 Members)</td>
+                        <td class="price">₹4,200</td>
+                    </tr>
+
+                    <tr>
+                        <td>Double AC Room</td>
+                        <td class="price">₹1,850</td>
+                    </tr>
+
+                    <tr>
+                        <td>AC 4-Bed Room</td>
+                        <td class="price">₹3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="section-title">Fresh-Up Facility</h2>
+
+            <div class="fresh-up">
+                <div class="fresh-up-details">
+                    <strong>Fresh-Up Charges</strong>
+                    <span class="price">₹200 / Person</span>
+                </div>
+
+                <p class="duration">
+                    Duration: 2 Hours per person
+                </p>
+            </div>
+        </section>
+
+        <section class="terms">
+            <h3>Booking Terms & Conditions</h3>
+
+            <ul>
+                <li>Room availability is subject to confirmation.</li>
+                <li>Please confirm the number of guests and check-in/check-out timings while enquiring.</li>
+                <li>Applicable taxes and additional charges, if any, will be confirmed at the time of booking.</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <h3>Thank You for Your Enquiry</h3>
+            <p>We look forward to serving you and your guests.</p>
+        </footer>
+
+    </main>
+
+    <button class="print-button" onclick="window.print()">
+        Print / Save as PDF
+    </button>
+
+</body>
+</html>

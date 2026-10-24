@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hero-pattern {
+    background-image: radial-gradient(rgba(56, 128, 135, 0.1) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .rooms-marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+
+  .rooms-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    animation: rooms-scroll 40s linear infinite;
+  }
+
+  .rooms-marquee:hover .rooms-marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes rooms-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rooms-marquee-track {
+    animation: none;
+  }
+}
+
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+details.faq-item[open] summary .faq-chevron {
+  transform: rotate(180deg);
+}

@@ -7,63 +7,20 @@
   <meta name="keywords" content="Rooms near temple West Nada, Family stay near temple, Safe hotel near temple West Entrance, Budget rooms near West Nada, Pure veg stays near temple, Sree Ayyappan Rooms" />
   <title>Sree Ayyappan Rooms | Safe Family Stay 45m from Temple West Nada</title>
 
+  <!-- Fix GitHub Pages path when Google opens the site without a trailing slash -->
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      if (path && !path.endsWith('/') && !/\.[a-zA-Z0-9]+$/.test(path)) {
+        window.location.replace(path + '/' + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            tealTheme: {
-              deep: '#388087',
-              medium: '#6FB3B8',
-              ice: '#BADFE7',
-              mint: '#C2EDCE',
-              bg: '#F6F6F2',
-            },
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    .hero-pattern {
-      background-image: radial-gradient(rgba(56, 128, 135, 0.1) 1px, transparent 1px);
-      background-size: 22px 22px;
-    }
-    .rooms-marquee {
-      overflow: hidden;
-      mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-    }
-    .rooms-marquee-track {
-      display: flex;
-      width: max-content;
-      gap: 1rem;
-      animation: rooms-scroll 40s linear infinite;
-    }
-    .rooms-marquee:hover .rooms-marquee-track {
-      animation-play-state: paused;
-    }
-    @keyframes rooms-scroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .rooms-marquee-track {
-        animation: none;
-      }
-    }
-    details.faq-item summary::-webkit-details-marker { display: none; }
-    details.faq-item[open] summary .faq-chevron { transform: rotate(180deg); }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
   {
