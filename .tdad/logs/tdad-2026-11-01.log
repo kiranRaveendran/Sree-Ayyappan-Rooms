@@ -1,0 +1,21 @@
+
+================================================================================
+TDAD Session Started: 2026-11-01T15:53:53.226Z
+================================================================================
+[2026-11-01T15:54:10.184Z] [EXTENSION] 🚀 TDAD extension is now ACTIVATED! Version with comprehensive logging
+[2026-11-01T15:54:10.184Z] [EXTENSION] 📁 Log file location: c:\Users\kiran\Desktop\MASONTRIX\Padimel Rooms\Sree Ayyapan Rooms\.tdad\logs\tdad-2026-11-01.log
+[2026-11-01T15:54:10.185Z] [EXTENSION] 📊 Workspace folders: c:\Users\kiran\Desktop\MASONTRIX\Padimel Rooms\Sree Ayyapan Rooms
+[2026-11-01T15:54:10.185Z] [EXTENSION] Creating WorkflowController...
+[2026-11-01T15:54:10.186Z] [EXTENSION] MVP: Using simple JSON storage (.tdad/workflows/workflow.json)
+[2026-11-01T15:54:10.187Z] [EXTENSION] TDAD Extension activated successfully
+[2026-11-01T15:54:10.187Z] [EXTENSION] Registering commands...
+[2026-11-01T15:54:10.196Z] [EXTENSION] TDAD structure already initialized
+[2026-11-01T15:54:10.196Z] [EXTENSION] Auto-opening TDAD Canvas...
+[2026-11-01T15:54:10.201Z] [CANVAS] Sprint 13: Agent Orchestrator initialized
+[2026-11-01T15:54:10.203Z] [CANVAS] [FileStatusSync] File watchers initialized
+[2026-11-01T15:54:10.204Z] [CANVAS] [FileStatusSync] Synced 0 nodes
+[2026-11-01T15:54:10.243Z] [EXTENSION] Deserializing webview panel state
+[2026-11-01T15:54:10.447Z] [EXTENSION] FeedbackManager: Session 115
+[2026-11-01T15:54:10.569Z] [CANVAS] WEBVIEW
+Data: Using stylesheets: index-WTAp2nbL.css
+[2026-11-01T15:54:10.571Z] [CANVAS] MVP: Canvas initialized with simple JSON storage
