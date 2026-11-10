@@ -2,10 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-white text-brand-text font-sans antialiased;
+  }
+}
+
 @layer components {
-  .hero-pattern {
-    background-image: radial-gradient(rgba(56, 128, 135, 0.1) 1px, transparent 1px);
-    background-size: 22px 22px;
+  .btn-primary {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-lg bg-brand-btn px-6 py-3 text-sm font-semibold text-brand-text shadow transition hover:bg-brand-btnHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-lg border border-brand-line bg-white px-6 py-3 text-sm font-semibold text-brand-heading transition hover:bg-brand-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub focus-visible:ring-offset-2;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-brand-text transition hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub;
+  }
+
+  .nav-link-active {
+    @apply text-sm font-semibold text-brand-heading;
+  }
+
+  .page-title {
+    @apply font-serif text-3xl font-bold text-brand-heading sm:text-4xl;
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.18em] text-brand-sub;
+  }
+
+  .card {
+    @apply rounded-xl border border-brand-line bg-white p-6 shadow-sm;
   }
 
   .rooms-marquee {

@@ -1,20 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html'],
+  content: ['./*.html'],
   theme: {
     extend: {
       colors: {
-        tealTheme: {
-          deep: '#388087',
-          medium: '#6FB3B8',
-          ice: '#BADFE7',
-          mint: '#C2EDCE',
-          bg: '#F6F6F2',
+        brand: {
+          text: '#712010',
+          heading: '#95240F',
+          sub: '#DE671E',
+          btn: '#E3BC6F',
+          btnHover: '#C9A04F',
+          soft: '#FBF6EC',
+          line: '#E8D5A8',
         },
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        serif: ['Poppins', 'system-ui', 'sans-serif'],
       },
     },
   },

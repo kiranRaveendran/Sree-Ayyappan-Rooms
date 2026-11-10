@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pure vegetarian restaurants within walking distance of Sree Ayyappan Rooms on West Nada." />
+    <meta name="keywords" content="Rooms near temple West Nada, Family stay near temple, Safe hotel near temple West Entrance, Budget rooms near West Nada, Pure veg stays near temple, Sree Ayyappan Rooms" />
+    <title>Dining Nearby | Sree Ayyappan Rooms</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        if (path && !path.endsWith('/') && !/\.[a-zA-Z0-9]+$/.test(path)) {
+          window.location.replace(path + '/' + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  <body class="bg-white text-brand-text">
+    
+    <header class="sticky top-0 z-50 border-b border-brand-line bg-white/95 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex min-w-0 items-center gap-2 sm:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">
+          <img src="images/Sree_ayyapan_rooms-LOGO.png" alt="Sree Ayyappan Rooms" class="h-9 w-auto shrink-0 object-contain sm:h-11" />
+          <span class="font-serif text-xs font-bold tracking-wide text-brand-heading transition hover:text-brand-sub sm:text-base lg:text-lg">SREE AYYAPPAN ROOMS</span>
+        </a>
+        <nav class="hidden items-center gap-4 xl:flex" aria-label="Primary">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="accommodations.html" class="nav-link">Accommodations</a>
+          <a href="highlights.html" class="nav-link">Highlights</a>
+          <a href="location.html" class="nav-link">Location</a>
+          <a href="dining.html" class="nav-link-active">Dining</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex shrink-0 items-center gap-2">
+          <a href="tel:7511148115" class="inline-flex min-h-[40px] shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-brand-btn px-2.5 py-1.5 text-xs font-semibold text-brand-text shadow transition hover:bg-brand-btnHover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub sm:min-h-[44px] sm:px-4 sm:py-2 sm:text-sm">Book Now</a>
+          <button type="button" id="menu-toggle" class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-brand-line bg-white text-brand-heading transition hover:bg-brand-soft xl:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+            <svg id="icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+            <svg id="icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden border-t border-brand-line bg-white xl:hidden" hidden>
+        <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 sm:px-6" aria-label="Mobile">
+          <a href="index.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">Home</a>
+          <a href="accommodations.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">Accommodations</a>
+          <a href="highlights.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">Highlights</a>
+          <a href="location.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">Location</a>
+          <a href="dining.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">Dining</a>
+          <a href="faq.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">FAQ</a>
+          <a href="contact.html" class="mobile-link rounded-lg px-3 py-3 text-sm font-medium text-brand-text transition hover:bg-brand-soft hover:text-brand-heading focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-sub">Contact</a>
+          <a href="tel:7511148115" class="mobile-link mt-2 btn-primary">Call Us</a>
+          <a href="https://wa.me/917511148115?text=Hi%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Sree%20Ayyappan%20Rooms%20near%20Temple%20West%20Nada." class="mobile-link btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+    <section class="bg-white py-16 md:py-20">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="section-eyebrow">Nearby Food</p>
+          <h1 class="page-title mt-2">Dining and Local Conveniences</h1>
+          <p class="mt-3 text-brand-text">Pure vegetarian restaurants are within walking distance of Sree Ayyappan Rooms on West Nada.</p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          
+          <article class="overflow-hidden rounded-xl border border-2 border-brand-heading bg-brand-soft shadow-md">
+            <div class="px-4 pt-4">
+              <span class="mb-2 inline-block rounded-full bg-brand-heading px-3 py-0.5 text-xs font-semibold uppercase tracking-wide text-white">Closest option</span>
+              <h2 class="font-semibold text-brand-heading">Suda Suda Idli</h2>
+              <p class="mt-1 text-sm text-brand-text">Walking distance, pure vegetarian</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.6068307347405!2d76.94097232104465!3d8.482962666048799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb001bb8718f%3A0x3591f98e7dccb312!2sSuda%20Suda%20Idli!5e1!3m2!1sen!2sin!4v1792594230100!5m2!1sen!2sin" title="Suda Suda Idli on Google Maps" class="mt-3 h-48 w-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-line bg-white shadow-sm">
+            <div class="px-4 pt-4">
+              
+              <h2 class="font-semibold text-brand-heading">Sri Udupi Hotel And Lodge</h2>
+              <p class="mt-1 text-sm text-brand-text">Walking distance, pure vegetarian</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.6060127977755!2d76.94079570472238!3d8.483306211917407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bba019fef183%3A0x49336781428c81dd!2sSri%20Udupi%20Hotel%20And%20Lodge!5e1!3m2!1sen!2sin!4v1792594250397!5m2!1sen!2sin" title="Sri Udupi Hotel And Lodge on Google Maps" class="mt-3 h-48 w-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-line bg-white shadow-sm">
+            <div class="px-4 pt-4">
+              
+              <h2 class="font-semibold text-brand-heading">Venkadesa Bhavan</h2>
+              <p class="mt-1 text-sm text-brand-text">Walking distance, pure vegetarian</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.30348050082796!2d76.94142656193891!3d8.482907950703543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bba0053d11af%3A0xfb021d0976602a4d!2sVenkadesa%20Bhavan!5e1!3m2!1sen!2sin!4v1792594266765!5m2!1sen!2sin" title="Venkadesa Bhavan on Google Maps" class="mt-3 h-48 w-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-line bg-white shadow-sm">
+            <div class="px-4 pt-4">
+              
+              <h2 class="font-semibold text-brand-heading">SREE Punjabi Dhabha</h2>
+              <p class="mt-1 text-sm text-brand-text">Walking distance, pure vegetarian</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.65159202080636!2d76.94145485758781!3d8.483156988363568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb096bca3e33%3A0x3367d502a0a63f4c!2sSREE%20Punjabi%20Dhabha!5e1!3m2!1sen!2sin!4v1792594292800!5m2!1sen!2sin" title="SREE Punjabi Dhabha on Google Maps" class="mt-3 h-48 w-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-line bg-white shadow-sm">
+            <div class="px-4 pt-4">
+              
+              <h2 class="font-semibold text-brand-heading">Hotel Gowri Krishna</h2>
+              <p class="mt-1 text-sm text-brand-text">Walking distance, pure vegetarian</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.6519743968577!2d76.94160695417239!3d8.48251455106289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb00301b239b%3A0xe83a70634fd2782d!2sHOTEL%20GOWRI%20KRISHNA!5e1!3m2!1sen!2sin!4v1792594335018!5m2!1sen!2sin" title="Hotel Gowri Krishna on Google Maps" class="mt-3 h-48 w-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-line bg-white shadow-sm">
+            <div class="px-4 pt-4">
+              
+              <h2 class="font-semibold text-brand-heading">Hotel Annapoorna</h2>
+              <p class="mt-1 text-sm text-brand-text">Walking distance, pure vegetarian</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1829.2142488525385!2d76.94036019673308!3d8.482839307804806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb0ee2e3de8b%3A0x5f547e8893107af8!2sHotel%20Annapoorna!5e1!3m2!1sen!2sin!4v1792594191784!5m2!1sen!2sin" title="Hotel Annapoorna on Google Maps" class="mt-3 h-48 w-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </article>
+        </div>
+        <div class="mx-auto mt-10 max-w-3xl rounded-xl border border-brand-line bg-brand-soft p-6 text-center shadow-sm sm:p-8">
+          <h3 class="text-lg font-semibold text-brand-heading">Healthcare Nearby</h3>
+          <p class="mt-2 text-brand-text">Government hospitals and medical care facilities are close by for emergencies.</p>
+        </div>
+      </div>
+    </section></main>
+    
+    <footer class="border-t border-brand-line bg-brand-heading text-white">
+      <div class="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6 lg:px-8">
+        <img src="images/Sree_ayyapan_rooms-LOGO.png" alt="Sree Ayyappan Rooms" class="mx-auto h-14 w-auto object-contain" />
+        <p class="mt-4 font-serif text-lg font-semibold">Sree Ayyappan Rooms</p>
+        <p class="mt-3 text-sm text-brand-btn">
+          <a href="tel:7511148115" class="transition hover:text-white">7511148115</a>
+          <span class="mx-2 opacity-60" aria-hidden="true">|</span>
+          <a href="tel:9061338169" class="transition hover:text-white">9061338169</a>
+          <span class="mx-2 opacity-60" aria-hidden="true">|</span>
+          <a href="mailto:kiranraveendran74@gmail.com" class="transition hover:text-white">kiranraveendran74@gmail.com</a>
+        </p>
+        <p class="mt-2 text-sm text-white/80">Safe family stay, 80 meters from Temple West Nada, near Police Check Point</p>
+        <div class="mt-5 flex flex-wrap justify-center gap-4 text-sm text-brand-btn">
+          <a href="index.html" class="hover:text-white">Home</a>
+          <a href="accommodations.html" class="hover:text-white">Accommodations</a>
+          <a href="highlights.html" class="hover:text-white">Highlights</a>
+          <a href="location.html" class="hover:text-white">Location</a>
+          <a href="dining.html" class="hover:text-white">Dining</a>
+          <a href="faq.html" class="hover:text-white">FAQ</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+        <p class="mt-6 text-sm text-white/70">&copy; Sree Ayyappan Rooms. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+  </body>
+</html>
